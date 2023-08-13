@@ -5,6 +5,7 @@ import os
 import io
 import numpy
 from pandas import DataFrame
+import pandas as pd
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.naive_bayes import MultinomialNB
 
@@ -37,11 +38,17 @@ def dataFrameFromDirectory(path, classification):
     return DataFrame(rows, index=index)
 
 #An empty dataframe with 'message' and 'class' headers
-data = DataFrame({'message': [], 'class': []})
+
+data = pd.DataFrame(columns=['message', 'class'])
 
 #Including the email details with the spam/ham classification in the dataframe
-data = data.append(dataFrameFromDirectory('C:/Users/surya/Desktop/DecemberBreak/emails/spam', 'spam'))
-data = data.append(dataFrameFromDirectory('C:/Users/surya/Desktop/DecemberBreak/emails/ham', 'ham'))
+
+# Create a list of dataframes
+dfs = [dataFrameFromDirectory('C:\\Users\\vaish\\Downloads\\Email-Spam-Classifier-Using-Naive-Bayes-2\\emails\\spam', 'spam'),
+       dataFrameFromDirectory('C:\\Users\\vaish\\Downloads\\Email-Spam-Classifier-Using-Naive-Bayes-2\\emails\\ham', 'ham')]
+
+# Concatenate dataframes vertically
+data = pd.concat(dfs, ignore_index=True)
 
 #Head and the Tail of 'data'
 data.head()
@@ -64,3 +71,4 @@ print(excount)
 
 prediction = classifier.predict(excount)
 print(prediction)
+

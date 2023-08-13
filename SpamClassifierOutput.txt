@@ -1,17 +1,4 @@
-%run "C:/Users/surya/Desktop/SpamClassifier.py"
-                                                   class  \
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...   ham   
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...   ham   
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...   ham   
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...   ham   
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...   ham   
 
-                                                                                              message  
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...  Man killed 'trying to surf' on Tube train \n\n...  
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...  Hi Gianni,\n\n\n\nA very good resource for thi...  
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...  Gianni Ponzi wrote:\n\n> I have a prob when tr...  
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...  Neale Pickett <neale@woozle.org> writes:\n\n\n...  
-C:/Users/surya/Desktop/DecemberBreak/Data Scien...  \n\nHi,\n\n\n\nI think you need to give us a l...  
   (0, 20104)    1         [0->1st sentence; 20104->word id; 1-> no. of times that the word occurs in the sentence]
   (0, 15629)    1
   (0, 30882)    1
